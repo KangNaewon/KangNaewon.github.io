@@ -2,25 +2,29 @@
 layout: default
 ---
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: site.theme_config.date_format }}
-      </time>
-    </p>
-  </header>
+<div class="w">
+  <a href="{{ "/" | relative_url }}" class="back-home">{{ site.theme_config.back_home_text | default: "Home" }}</a>
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: site.theme_config.date_format }}
+        </time>
+      </p>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-  <!-- Giscus 댓글 섹션 -->
-  {% if site.giscus.enabled %}
-  <div class="giscus-wrapper" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e1e4e8;">
-    <h2 style="margin-bottom: 1.5rem;">댓글</h2>
-    {% include giscus.html %}
-  </div>
-  {% endif %}
-</article>
+    <!-- Giscus 댓글 섹션 -->
+    {% if site.giscus.enabled %}
+    <div class="giscus-wrapper" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e1e4e8;">
+      <h2 style="margin-bottom: 1.5rem;">댓글</h2>
+      {% include giscus.html %}
+    </div>
+    {% endif %}
+  </article>
+</div>
