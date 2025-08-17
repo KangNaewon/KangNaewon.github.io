@@ -12,3 +12,19 @@ theme_config:
   back_home_text: "Home"
   date_format: "%Y-%m-%d"
   show_description: true
+
+# Giscus Comments
+giscus:
+  enabled: true
+  repo: "KangNaewon/KangNaewon.github.io"
+  repo_id: "" # 설정 페이지에서 확인 필요
+  category: "Announcements"
+  category_id: "" # 설정 페이지에서 확인 필요
+  mapping: "pathname"
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: "bottom"
+  theme: "dark"
+  lang: "ko"
+  crossorigin: "anonymous"
