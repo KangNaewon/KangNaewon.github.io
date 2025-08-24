@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "한병철 <고통 없는 사회>"
+title:  "한병철 고통 없는 사회"
 date:   2025-08-24 00:00:00 +0900
 categories: books
 ---
